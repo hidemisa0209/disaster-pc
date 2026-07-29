@@ -1,0 +1,2240 @@
+
+
+
+
+
+/* 共通 */
+html,
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  background-color: #CF1225;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 1280px;
+  margin: 0 auto;
+  background-image: url(../img/bg.png);
+}
+
+.inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #CF1225;
+    font: 200 36px 'Mochiy Pop One';
+    text-align: center;
+    margin-top: 200px;
+}
+
+h2 small {
+    display: block;
+    font: 600 20px 'Inter';
+    letter-spacing: 2px;
+    margin-top: 18px;
+}
+
+#overlay {
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+#overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+
+/* 共通 - スクロールバー */
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f6f4ee;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4BB2C8;
+    border-radius: 10px;
+    border: 4px solid #f6f4ee;
+    cursor: pointer;
+}
+
+
+
+
+
+/* メインビジュアル */
+#main-visual {
+    background: url(../img/m_back01.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 970;
+    /* 横：縦！これで比率を守ってるので消さない事 */
+    z-index: 2;
+    overflow: hidden;
+}
+
+.m-h1pic {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.m-pic-wrap {
+    position: absolute;
+    width: 72%;
+    max-width: 974px;
+    top: -320px;
+    right: -280px;
+}
+
+.m-pic {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.m-pic-wrap::after {
+    content: "";
+    position: absolute;
+    background: url(../img/m_befo.png) no-repeat;
+    width: 120px;
+    height: 120px;
+    bottom: 150px;
+    left: -70px;
+    z-index: 2;
+}
+
+.m-h1pic h1 {
+    position: relative;
+    color: #fff;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 4px;
+    padding-top: 230px;
+
+    min-width: 520px;
+    flex-shrink: 0;
+}
+
+.m-mar {
+    position: relative;
+}
+
+.m-h1pic h1::before {
+    position: absolute;
+    content: "";
+    background: url(../img/m_paper.svg) no-repeat;
+    width: 604px;
+    height: 870px;
+    top: -160px;
+    left: -140px;
+    z-index: 2;
+}
+
+.m-h1pic h1::after {
+    position: absolute;
+    content: "";
+    background: url(../img/m_kira01.png) no-repeat;
+    width: 120px;
+    height: 120px;
+    top: 180px;
+    right: 70px;
+    z-index: 2;
+}
+
+.m-mar::after {
+    position: absolute;
+    content: "";
+    background: url(../img/m_marker.png) no-repeat;
+    width: 330px;
+    height: 60px;
+    top: 60px;
+    left: -122px;
+    z-index: 2;
+}
+
+.m-logo a {
+    position: relative;
+    top: 10px;
+    z-index: 4;
+}
+
+
+
+
+
+/* プロフィール欄 */
+#profile {
+    position: relative;
+    background: url(../img/m_back02.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 650;
+    margin-top: -320px;
+    overflow: hidden;
+}
+
+#profile::after {
+    position: absolute;
+    content: "";
+    background: url(../img/m_paper02.svg) no-repeat;
+    background-size: contain;
+    width: 600px;
+    height: 600px;
+    top: 60px;
+    right: -80px;
+}
+
+#profile .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 240px;
+    gap: 30px;
+}
+
+#profile p {
+    color: #CF1225;
+    font-size: 30px;
+    font-family: 'Mochiy Pop One';
+}
+
+#profile span {
+    display: block;
+    color: #89380B;
+    font-size: 24px;
+}
+
+
+
+
+
+/* メニューバー - 01 */
+#main-menu {
+    position: relative;
+    background: url(../img/m_back03.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 414;
+    margin-top: -320px;
+}
+
+#main-menu .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 28px;
+}
+
+#main-menu ul {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 64px;
+}
+
+#main-menu li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+#main-menu span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+
+/* メニューバー - 02 */
+.m-icon {
+    width: 150px;
+    height: 150px;
+    background: no-repeat center / contain;
+}
+
+#main-menu li a .m-icon,
+#main-menu li a .m-txt {
+    transition: color 0.3s ease, background-image 0.3s ease;
+}
+
+#micon01 {
+    background-image: url(../img/menu01.png);
+}
+
+#micon02 {
+    background-image: url(../img/menu02.png);
+}
+
+#micon03 {
+    background-image: url(../img/menu03.png);
+}
+
+#micon04 {
+    background-image: url(../img/menu04.png);
+}
+
+#micon05 {
+    background-image: url(../img/menu05.png);
+}
+
+#micon06 {
+    background-image: url(../img/menu06.png);
+}
+
+#main-menu li a:hover #micon01 {
+    background-image: url(../img/menu01_h.png);
+}
+
+#main-menu li a:hover #micon02 {
+    background-image: url(../img/menu02_h.png);
+}
+
+#main-menu li a:hover #micon03 {
+    background-image: url(../img/menu03_h.png);
+}
+
+#main-menu li a:hover #micon04 {
+    background-image: url(../img/menu04_h.png);
+}
+
+#main-menu li a:hover #micon05 {
+    background-image: url(../img/menu05_h.png);
+}
+
+#main-menu li a:hover #micon06 {
+    background-image: url(../img/menu06_h.png);
+}
+
+#main-menu li a:hover .m-txt {
+    color: #FBD452;
+}
+
+
+
+
+
+/* いま災害が起きたら - 01 */
+#situation {
+    text-align: center;
+}
+
+.s-click {
+    margin: 40px 0px 40px 0px;
+}
+
+.s-click span {
+    position: relative;
+    color: #89380B;
+    font-size: 22px;
+}
+
+.s-click span::after {
+    position: absolute;
+    content: "";
+    background: url(../img/s_arrow.svg) no-repeat;
+    background-size: contain;
+
+    width: 30px;
+    height: 30px;
+    top: 45px;
+    left: 60px;
+    z-index: 2;
+}
+
+
+
+
+/* いま災害が起きたら - 02 */
+#situation-catch {
+    position: relative;
+    background: url(../img/s_back01.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 368;
+    overflow: hidden;
+}
+
+#situation-catch::before {
+    position: absolute;
+    content: "";
+    background: url(../img/s_befo.png) no-repeat;
+    background-size: contain;
+
+    width: 410px;
+    height: 410px;
+    top: 60px;
+    left: 0px;
+}
+
+#situation-catch::after {
+    position: absolute;
+    content: "";
+    background: url(../img/s_aft.png) no-repeat;
+    background-size: contain;
+
+    width: 410px;
+    height: 410px;
+    top: 60px;
+    right: 0px;
+}
+
+
+#situation-catch .inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#situation-catch span {
+    display: block;
+    color: #FDF9ED;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#situation-catch p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #CF1225;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 20px;
+
+    width: 612px;
+    height: 114px;
+    background: url(../img/s_back02.svg) no-repeat center;
+}
+
+
+
+
+
+
+
+/* いま災害が起きたら - 03 */
+.s-click-cards {
+    margin: 90px 0px 800px 0px;
+}
+
+.s-click-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.s-click-card img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.s-click-card button {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+}
+
+.s-card button {
+    transition: transform 0.3s ease;
+}
+
+.s-card button:hover {
+    transform: scale(1.05);
+}
+
+.s-click-cards {
+    position: relative;
+}
+
+.s-click-cards::before {
+    position: absolute;
+    content: "";
+    background: url(../img/s_cardb.png) no-repeat;
+
+    width: 350px;
+    height: 700px;
+    top: 0px;
+    left: -140px;
+}
+
+.s-click-cards::after {
+    position: absolute;
+    content: "";
+    background: url(../img/s_carda.png) no-repeat;
+
+    width: 350px;
+    height: 700px;
+    top: 0px;
+    left: 1012px;
+}
+
+
+
+
+
+/* いま災害が起きたら - 04 */
+#scard01 {
+    position: absolute;
+    top: -30px;
+    left: 60px;
+}
+
+#scard02 {
+    position: absolute;
+    top: 20px;
+    left: 440px;
+}
+
+#scard03 {
+    position: absolute;
+    top: 0px;
+    left: 800px;
+}
+
+#scard04 {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+
+#scard05 {
+    position: absolute;
+    top: 300px;
+    left: 630px;
+}
+
+
+
+
+
+/* いま災害が起きたら・js後の反応（カード） */
+.s-cardinfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    /* ← 少し下から出る感じにしたいから！ */
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.s-cardinfo img {
+    width: 1000px;
+    height: auto;
+}
+
+.s-cardinfo.is-active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+
+
+
+
+/* 協創シリーズとは */
+#about {
+    text-align: center;
+}
+
+#about ul {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#about ul::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/a_left.png) no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 240px;
+
+    top: 0px;
+    left: 80px;
+}
+
+#about ul::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/a_right.png) no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 240px;
+
+    top: 0px;
+    right: 80px;
+}
+
+
+.about-catch {
+    background: url(../img/a_back.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 314;
+    margin-top: 40px;
+}
+
+.about-catch span {
+    display: block;
+    color: #89380B;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.about-catch .inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - 消防 */
+.l-main {
+    text-align: center;
+}
+
+.l-main img {
+    margin: 10px 0px 0px 60px;
+}
+
+.l-main h3 {
+    color: #89380B;
+    font-size: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin: -60px 0px 60px 0px;
+}
+
+.l-main small {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+#lfdetails {
+    background: url(../img/l_back01.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 490;
+    overflow: hidden;
+}
+
+.l-details .inner {
+    display: flex;
+    padding: 20px 0px 0px 0px;
+}
+
+.l-features {
+    margin: 10px 0px 0px 40px;
+}
+
+.l-features ul {
+    margin: 80px 0px 20px 40px;
+}
+
+.l-features li {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.l-features li::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/l-befo.png) no-repeat;
+    background-size: contain;
+    width: 38px;
+    height: 38px;
+
+    top: 0px;
+    left: -50px;
+}
+
+.l-features li p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.l-features li span {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.l-price {
+    display: flex;
+    align-items: center;
+}
+
+.l-amount p {
+    color: #fff;
+    font-weight: 400;
+}
+
+.l-amount span {
+    font-size: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    margin: 0px 10px 0px 10px;
+}
+
+.l-price a {
+    display: flex;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    padding: 20px 86px 20px 66px;
+    border-radius: 999px;
+
+    color: #CF1225;
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 16px 0px 0px 80px;
+    cursor: pointer;
+}
+
+#lfprice a span {
+    position: relative;
+}
+
+#lfprice a span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/l-arrow01.svg) no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 16px;
+
+    top: 58%;
+    right: -36px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#lfprice a:hover span::after {
+    transform: translate(6px, -50%);
+}
+
+.l-price a {
+    transition: transform 0.25s ease;
+}
+
+.l-price a:hover {
+    transform: scale(1.05);
+}
+
+.l-price a{
+    position: relative;
+}
+
+.l-price a::after{
+    content: "";
+    position: absolute;
+
+    background: url(../img/l-aft.png) no-repeat;
+    background-size: contain;
+    width: 95px;
+    height: 95px;
+
+    top: -50px;
+    right: -90px;
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - 救助/潜水 */
+#lritem,
+#lditem {
+    margin-top: 160px;
+}
+
+#lrdetails {
+    background: url(../img/l_back02.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 490;
+    overflow: hidden;
+}
+
+#lddetails {
+    background: url(../img/l_back03.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 490;
+    overflow: hidden;
+}
+
+#lrprice a {
+    color: #3B55B9;
+}
+
+#ldfeatures a {
+    color: #4BB2C8;
+}
+
+#lrprice a span {
+    position: relative;
+}
+
+#lrprice a span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/l-arrow02.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -26px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#lrprice a:hover span::after {
+    transform: translate(6px, -50%);
+}
+
+#ldprice a span {
+    position: relative;
+}
+
+#ldprice a span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/l-arrow03.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -26px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#ldprice a:hover span::after {
+    transform: translate(6px, -50%);
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - クイズ/共通 */
+.l-quiz {
+    margin-top: 120px;
+}
+
+.l-quiz h4 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 50px;
+}
+
+.l-quiz ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.l-quiz li {
+    position: relative;
+    background: url(../img/quiz_memo.svg) no-repeat;
+    background-size: contain;
+
+    width: 350px;
+    height: 340px;
+
+    text-align: center;
+}
+
+.l-quiz p {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    font-family: 'Mochiy Pop One';
+    font-weight: 600;
+}
+
+.l-quiz li img {
+    width: 70%;
+    height: auto;
+    margin: 70px 0px 16px 0px;
+}
+
+.l-quiz ul span {
+    display: block;
+    color: #89380B;
+    font-size: 18px;
+}
+
+.l-quiz button {
+    transition: transform 0.25s ease;
+}
+
+.l-quiz button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - クイズ/消防 */
+#lfquiz h4 {
+    position: relative;
+    color: #CF1225;
+}
+
+#lfquiz h4::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/q01.svg) no-repeat;
+    background-size: contain;
+    width: 124px;
+    height: 120px;
+
+    top: -48px;
+    left: -40px;
+    z-index: -1;
+}
+
+#lfquiz h4::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/quiz_callout01.png) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 100px;
+
+    top: -50px;
+    left: 360px;
+}
+
+#lfquiz li p {
+    color: #CF1225;
+}
+
+#lfquiz button {
+    display: flex;
+    background-color: #CF1225;
+    border: none;
+    outline: none;
+    padding: 24px 78px 24px 58px;
+    border-radius: 999px;
+
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+#lfquiz button span {
+    position: relative;
+}
+
+#lfquiz button span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/q-arrow.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -30px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#lfquiz button:hover span::after {
+    transform: translate(4px, -50%);
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - クイズ/救助 */
+#lrquiz h4 {
+    position: relative;
+    color: #3B55B9;
+}
+
+#lrquiz h4::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/q02.svg) no-repeat;
+    background-size: contain;
+    width: 124px;
+    height: 120px;
+
+    top: -48px;
+    left: -40px;
+    z-index: -1;
+}
+
+#lrquiz h4::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/quiz_callout02.png) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 100px;
+
+    top: -50px;
+    left: 440px;
+}
+
+#lrquiz li p {
+    color: #3B55B9;
+}
+
+#lrquiz button {
+    display: flex;
+    background-color: #3B55B9;
+    border: none;
+    outline: none;
+    padding: 24px 78px 24px 58px;
+    border-radius: 999px;
+
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+#lrquiz button span {
+    position: relative;
+}
+
+#lrquiz button span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/q-arrow.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -30px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#lrquiz button:hover span::after {
+    transform: translate(4px, -50%);
+}
+
+
+
+
+
+/* 協創シリーズ一覧 - クイズ/潜水 */
+#ldquiz h4 {
+    position: relative;
+    color: #4BB2C8;
+}
+
+#ldquiz h4::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/q03.svg) no-repeat;
+    background-size: contain;
+    width: 124px;
+    height: 120px;
+
+    top: -64px;
+    left: -40px;
+    z-index: -1;
+}
+
+#ldquiz h4::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/quiz_callout03.png) no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 100px;
+
+    top: -50px;
+    left: 400px;
+}
+
+#ldquiz li p {
+    color: #4BB2C8;
+}
+
+#ldquiz button {
+    display: flex;
+    background-color: #4BB2C8;
+    border: none;
+    outline: none;
+    padding: 24px 78px 24px 58px;
+    border-radius: 999px;
+
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+#ldquiz button span {
+    position: relative;
+}
+
+#ldquiz button span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/q-arrow.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -30px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#ldquiz button:hover span::after {
+    transform: translate(4px, -50%);
+}
+
+
+
+
+
+/* 協創シリーズ一覧・js後の反応（クイズ） */
+#linfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    /* ← 少し下から出る感じにしたいから！ */
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#linfo.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+}
+
+.l-quizinfo {
+    display: none;
+    gap: 40px;
+}
+
+.l-quizinfo.is-active {
+    display: flex;
+}
+
+.l-quizinfo li {
+    position: relative;
+    background: url(../img/quiz_memo.svg) no-repeat;
+    background-size: contain;
+
+    width: 350px;
+    height: 340px;
+    text-align: center;
+}
+
+.l-quizinfo ul p {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    font-family: 'Mochiy Pop One';
+    font-weight: 600;
+}
+
+.l-quizinfo li img {
+    width: 70%;
+    height: auto;
+    margin: 70px 0px 16px 0px;
+}
+
+.l-quizinfo ul span {
+    display: block;
+    color: #89380B;
+    font-size: 18px;
+}
+
+.quizinfo-txt {
+    background: url(../img/q_back.png) right bottom / cover;
+    background-size: contain;
+    width: 590px;
+    height: 300px;
+    padding: 60px 90px;
+}
+
+.quizinfo-txt em {
+    font-size: 40px;
+    font-style: none;
+    margin-right: 10px;
+}
+
+.quizinfo-txt p {
+    font-size: 28px;
+    font-family: 'Mochiy Pop One';
+}
+
+.quizinfo-txt span {
+    display: block;
+    color: #89380B;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.ansr-info {
+    margin-top: 20px;
+}
+
+#lfquizinfo p {
+    color: #CF1225;
+}
+
+#lrquizinfo p {
+    color: #3B55B9;
+}
+
+#ldquizinfo p {
+    color: #4BB2C8;
+}
+
+
+
+
+
+/* 防災の取り組み */
+#history-catch {
+    background: url(../img/h_back1.svg) right bottom / cover;
+    background-size: contain;
+    width: 100%;
+    aspect-ratio: 1280 / 500;
+    margin-top: 80px;
+}
+
+#history-card {
+    background: url(../img/h_back2.svg) right bottom / cover;
+    background-size: contain;
+    width: 100%;
+    aspect-ratio: 1280 / 300;
+    margin-top: -80px;
+}
+
+#history-catch .inner {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 60px 0px 0px 0px;
+}
+
+.h-txt span {
+    display: block;
+    color: #89380B;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+.h-txt span+span {
+    margin-top: 20px;
+}
+
+.h-card {
+    background: url(../img/h-memo.svg) no-repeat right bottom / cover;
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    /* 横スクロールで必要ぽい？ */
+}
+
+#history-card {
+    display: flex;
+    gap: 20px;
+    padding: 50px 20px;
+    overflow-x: auto;
+    /* 横スクロール! */
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+}
+
+#history-card::-webkit-scrollbar {
+    display: none;
+    /* Chrome / Edge / Safari */
+}
+
+.hc-txt {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hc-txt p {
+    color: #CF1225;
+    font-size: 24px;
+    font-family: 'Mochiy Pop One';
+    margin: 26px 0px 10px 0px;
+}
+
+.hc-txt em {
+    color: #CF1225;
+    font-size: 18px;
+    font-style: normal;
+    margin-left: 4px;
+}
+
+.hc-txt span {
+    color: #89380B;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+
+
+
+/* 防災チェック - 01 */
+#check {
+    text-align: center;
+}
+
+.c-catch {
+    margin: 60px 0px 70px 0px;
+}
+
+.c-catch p {
+    position: relative;
+    color: #89380B;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.c-catch p::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/check_marker.svg) no-repeat;
+    /* 文字の下にマーカーsvg */
+    background-size: contain;
+    width: 480px;
+    height: 34px;
+
+    top: 20px;
+    left: 400px;
+    z-index: -1;
+}
+
+.c-catch span {
+    display: block;
+    color: #89380B;
+    font-size: 20px;
+}
+
+#check button {
+    display: flex;
+    background-color: #FFD856;
+    border: none;
+    outline: none;
+    padding: 20px 74px 20px 60px;
+    border-radius: 999px;
+
+    color: #89380B;
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 40px auto 0;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+#check button span {
+    position: relative;
+}
+
+#check button span::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/c_arrow.svg) no-repeat;
+    background-size: contain;
+    width: 8px;
+    height: 14px;
+
+    top: 58%;
+    right: -26px;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+#check button:hover {
+    transform: scale(1.05);
+}
+
+#check button:hover span::after {
+    transform: translate(6px, -50%);
+}
+
+#cbtn.is-active {
+    transform: scale(1.05);
+    opacity: 0.6;
+    pointer-events: none;
+    /* 1回押したらもう押せないよ～んな為 */
+}
+
+#rucksack {
+    transition: opacity 0.4s ease;
+}
+
+
+
+
+
+/* 防災チェック - 02 */
+.c-pics {
+    position: relative;
+}
+
+.c-pics .item {
+    background: url(../img/c_note.svg) no-repeat;
+    background-size: contain;
+    width: 434px;
+    height: 200px;
+    text-align: left;
+    padding: 40px 0px 0px 100px;
+}
+
+.c-pics .item span {
+    display: block;
+    color: #89380B;
+}
+
+.c-pics .item em {
+    color: #CF1225;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0px 4px 0px 4px;
+}
+
+.c-pics #item01 em {
+    margin: 0px 4px 0px -2px;
+}
+
+.c-pics .item p {
+    position: relative;
+    color: #CF1225;
+    font-size: 26px;
+    font-weight: 600;
+    padding-left: 40px;
+    margin-bottom: 14px;
+}
+
+.c-pics .item p::before {
+    content: "";
+    position: absolute;
+
+    background: url(../img/c_check.svg) no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+
+    top: 1px;
+    left: -6px;
+}
+
+#item01 p {
+    position: relative;
+}
+
+#item02 p {
+    position: relative;
+}
+
+#item03 p {
+    position: relative;
+}
+
+#item04 p {
+    position: relative;
+}
+
+#item01 p::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/c_nicon01.svg) no-repeat;
+    background-size: contain;
+    width: 94px;
+    height: 94px;
+
+    top: 30px;
+    right: 34px;
+}
+
+#item02 p::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/c_nicon02.svg) no-repeat;
+    background-size: contain;
+    width: 94px;
+    height: 94px;
+
+    top: 30px;
+    right: 40px;
+}
+
+#item03 p::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/c_nicon03.svg) no-repeat;
+    background-size: contain;
+    width: 94px;
+    height: 94px;
+
+    top: -10px;
+    right: 40px;
+}
+
+#item04 p::after {
+    content: "";
+    position: absolute;
+
+    background: url(../img/c_nicon04.svg) no-repeat;
+    background-size: contain;
+    width: 94px;
+    height: 94px;
+
+    top: 0px;
+    right: 50px;
+}
+
+#citems .item {
+    position: absolute;
+    z-index: 2;
+}
+
+#item01 {
+    top: 0%;
+    left: -1%;
+}
+
+#item02 {
+    top: 0%;
+    right: -2%;
+}
+
+#item03 {
+    bottom: 0%;
+    left: -1%;
+}
+
+#item04 {
+    bottom: 0%;
+    right: -2%;
+}
+
+#citems .item {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#citems.is-open .item {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
+/* 今日からできる防災 - 01 */
+#begin {
+    background: url(../img/b-back01.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 2000;
+}
+
+.b-catch {
+    background: url(../img/b-back02.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 372;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.b-catch span {
+    display: block;
+    color: #89380B;
+    font-size: 24px;
+    text-align: center;
+}
+
+#begin h2 {
+    color: #FDF9ED;
+    padding: 168px 0px 92px 0px;
+}
+
+
+
+
+
+/* 今日からできる防災 - 02 */
+.begin-card {
+    margin-top: 140px;
+}
+
+.b-card {
+    display: flex;
+    background-color: #FDF9ED;
+    border-radius: 160px;
+    margin: 80px 0px 80px 0px;
+    padding: 60px 80px 60px 130px;
+    align-items: center;
+    gap: 40px;
+}
+
+.bc-num {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bc-num p {
+    color: #CF1225;
+    font-size: 80px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.bc-num span {
+    color: #CF1225;
+    font-size: 20px;
+    font-family: 'Mochiy Pop One';
+    font-weight: 600;
+    margin-top: -20px;
+}
+
+.bc-txt {
+    margin: 10px 0px 0px 40px;
+}
+
+.bc-txt p {
+    color: #CF1225;
+    font-size: 28px;
+    font-family: 'Mochiy Pop One';
+    margin-bottom: 18px;
+}
+
+.bc-txt span {
+    display: block;
+    color: #89380B;
+    font-size: 22px;
+}
+
+.bc-pic {
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.bc-pic img{
+    width: 352px;
+    height: 220px;
+    object-fit: contain;
+}
+
+
+
+
+
+/* 今日からできる防災 - 03 */
+#last-catch {
+    margin: 160px 0;
+}
+
+#last-catch .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.l-catch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #FDF9ED;
+    font-size: 30px;
+    font-family: 'Mochiy Pop One';
+    width: 652px;
+    height: 114px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#l-catch-1 {
+    background-image: url(../img/b-back03.svg);
+}
+
+#l-catch-2 {
+    background-image: url(../img/b-back04.svg);
+}
+
+
+
+
+
+/* フッター */
+footer {
+    background: url(../img/f_back01.svg) right bottom / cover;
+    width: 100%;
+    aspect-ratio: 1280 / 300;
+}
+
+footer .inner {
+    display: flex;
+    padding: 64px 0px 0px 0px;
+}
+
+.f-menu {
+    display: flex;
+    gap: 70px;
+}
+
+#f-menu-1,
+#f-menu-2,
+#f-menu-3 {
+    display: block;
+}
+
+.f-txt {
+    color: #89380B;
+}
+
+.f-address {
+    font-size: 18px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 20px 0px 10px 0px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.f-menu li a span {
+    position: relative;
+    color: #89380B;
+    font-size: 18px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+
+.f-menu li a {
+    text-decoration: none;
+}
+
+.f-menu li a span {
+    transition: color 0.15s ease, font-weight 0.15s ease;
+}
+
+.f-menu li a span:hover {
+    color: #CF1225;
+    font-weight: 600;
+}
+
+.f-menu li a span::before {
+    content: "";
+    position: absolute;
+    display: block;
+
+    background: url(../img/icon.png) no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+
+    top: 5px;
+    left: -30px;
+}
+
+.f-pic img {
+    width: 665px;
+    height: 126px;
+    object-fit: contain;
+}
+
+.f-pic {
+    margin: 40px 60px 0px -100px;
+}
+
+.f-left {
+    margin-left: auto;
+}
+
+.f-right {
+    margin-top: -20px;
+}
+
+.f-logo img {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* TOPボタン */
+#top-btn {
+    /*opacity: 0;  1000pxあたり超えるまで見せたくないから！（動きはjsみてクレナーデ） */
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    position: relative; /* 元々fixedだったけど変えてみてる */
+    /* right: 60px;
+    bottom: 60px; */
+    z-index: 8;
+}
+
+#top-btn.is-show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.top-btn-inner {
+    position: absolute;
+    right: -10px;
+    bottom: 40px;
+    width: 62px;
+    height: 62px;
+    background-color: #CF1225;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.top-btn-inner:hover {
+    transform: scale(1.08);
+}
+
+
+
+
+
+/* ナビゲーションボタン - 01 */
+#m-menubtn {
+    opacity: 0;
+    position: fixed;
+    right: 60px;
+    top: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background: none;  /* 背景丸からブワーって広げたいのでビフォーで背景つけて丸にしてる！ */
+    z-index: 10;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#m-menubtn::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 62px;
+    height: 62px;
+
+    background-color: #4BB2C8;
+    border-radius: 50%;
+
+    transform-origin: right top;
+    transition: transform 0.4s ease-in-out, border-radius 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.menubtn-wrap {
+    position: absolute;  /* ulが外にはみ出さないようにかけてるマスク的なアレ */
+    right: 0;
+    top: 0;
+    width: 62px;
+    height: 62px;
+
+    background: none;
+    border-radius: 50%;
+
+    overflow: hidden;
+    transform-origin: right bottom;
+    transition: width 0.4s ease, height 0.4s ease, border-radius 0.4s ease;
+}
+
+.menubtn-wrap ul {
+    position: absolute;
+    display: flex;
+    right: 50px;
+    top: 10px;
+
+    flex-direction: column;
+    gap: 16px;
+    pointer-events: none;
+}
+
+.menubtn-wrap li {
+    opacity: 0;
+    transform-origin: bottom right;
+    transform: translateY(10px) scaleY(0.95); 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#m-menubtn li a {
+    display: flex;
+    flex-direction: row;  /* これが中の要素横並びにしてくれてるぽい！？columnだと多分縦になっちゃう */
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+#m-menubtn.is-open .menubtn-wrap {
+    width: 300px;
+    height: 420px;
+    border-radius: 16px;
+}
+
+#m-menubtn.is-open .menubtn-wrap ul {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0.2s;
+}
+
+#m-menubtn.is-open .menubtn-wrap li {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#m-menubtn.is-open::before {
+    transform: scale(5, 7.4);
+    border-radius: 4px;
+}
+
+#m-menubtn:not(.is-open)::before {
+    transform: scale(1);
+}
+
+#m-menubtn:not(.is-open) .menubtn-wrap li {
+    transform: translateX(20px) scale(0.8); /* 閉じるとき横にちょっとずらしながら閉じてる */
+    opacity: 0;
+    transition-delay: 0s !important;  /* なんか閉じる時グチャー！って閉じやがるので0秒で存在を消してやる */
+}
+
+#m-menubtn.is-show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#m-menubtn:not(.is-open):hover {
+    transform: scale(1.08);
+}
+
+
+
+
+
+/* ナビゲーションボタン - 02 */
+.mb-icon {
+    width: 40px;
+    height: 40px;
+    background: no-repeat center / contain;
+    flex-shrink: 0;
+}
+
+#m-menubtn li a .mb-icon,
+#m-menubtn li a .mb-txt {
+    transition: color 0.3s ease, background-image 0.3s ease;
+}
+
+#mbicon01 {
+    background-image: url(../img/menu01.png);
+}
+
+#mbicon02 {
+    background-image: url(../img/menu02.png);
+}
+
+#mbicon03 {
+    background-image: url(../img/menu03.png);
+}
+
+#mbicon04 {
+    background-image: url(../img/menu04.png);
+}
+
+#mbicon05 {
+    background-image: url(../img/menu05.png);
+}
+
+#mbicon06 {
+    background-image: url(../img/menu06.png);
+}
+
+#m-menubtn li a:hover #mbicon01 {
+    background-image: url(../img/menu01_h.png);
+}
+
+#m-menubtn li a:hover #mbicon02 {
+    background-image: url(../img/menu02_h.png);
+}
+
+#m-menubtn li a:hover #mbicon03 {
+    background-image: url(../img/menu03_h.png);
+}
+
+#m-menubtn li a:hover #mbicon04 {
+    background-image: url(../img/menu04_h.png);
+}
+
+#m-menubtn li a:hover #mbicon05 {
+    background-image: url(../img/menu05_h.png);
+}
+
+#m-menubtn li a:hover #mbicon06 {
+    background-image: url(../img/menu06_h.png);
+}
+
+#m-menubtn li a:hover .mb-txt {
+    color: #FBD452;
+}
+
+
+
+
+
+/* 画像の位置とかliの出方の微調整！ */
+#mbicon01 {
+transform: translateY(-5px);
+}
+
+#mbicon02 {
+    transform: translateY(-6px);
+}
+
+#mbicon03 {
+    transform: translateY(-2px);
+}
+
+#mbicon04 {
+    transform: translateY(-4px);
+}
+
+#mbicon05 {
+    transform: translateY(-4px);
+}
+
+#mbicon06 {
+    transform: translateY(-6px);
+}
+
+.menubtn-wrap ul li:nth-child(1) {
+    transition-delay: 0.20s;
+}
+
+.menubtn-wrap ul li:nth-child(2) {
+    transition-delay: 0.24s;
+}
+
+.menubtn-wrap ul li:nth-child(3) {
+    transition-delay: 0.28s;
+}
+
+.menubtn-wrap ul li:nth-child(4) {
+    transition-delay: 0.32s;
+}
+
+.menubtn-wrap ul li:nth-child(5) {
+    transition-delay: 0.36s;
+}
+
+.menubtn-wrap ul li:nth-child(6) {
+    transition-delay: 0.40s;
+}
+
+
+
+
+
+/* ナビゲーションボタン - 03 */
+.cross {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    place-items: center;  /* justify-content: center; じゃなくてこっちの方が良いかも？*/
+    cursor: pointer;
+    z-index: 8;
+}
+
+.cross span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.cross {
+    grid-auto-rows: min-content;
+    row-gap: 6px;  /* ここspan同士のgapぽいからいじるならここ */
+}
+
+.cross {
+    position: absolute;
+    right: 11px;
+    bottom: 1px;
+}
+
+.cross span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#m-menubtn span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#m-menubtn.is-open .cross span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#m-menubtn.is-open .cross span:nth-child(2) {
+    opacity: 0;
+}
+
+#m-menubtn.is-open .cross span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icon.png" type="image/png" alt="アイコン">
+    <title>進級制作2026</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mochiy+Pop+One&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+
+<body>
+    <div id="wrapper" class="wrapper">
+
+
+        <!-- situationのカード押した時の要素 -->
+        <section class="s-info" id="sinfo">
+            <div class="s-cardinfo" id="scard01info"><img src="./img/s_note01.png" alt="ノートの画像"></div>
+            <div class="s-cardinfo" id="scard02info"><img src="./img/s_note02.png" alt="ノートの画像"></div>
+            <div class="s-cardinfo" id="scard03info"><img src="./img/s_note03.png" alt="ノートの画像"></div>
+            <div class="s-cardinfo" id="scard04info"><img src="./img/s_note04.png" alt="ノートの画像"></div>
+            <div class="s-cardinfo" id="scard05info"><img src="./img/s_note05.png" alt="ノートの画像"></div>
+        </section>
+
+
+
+        <!-- lineupのクイズの答えの要素 -->
+        <section class="l-info" id="linfo">
+            <div class="l-quizinfo" id="lfquizinfo">
+                <ul>
+                    <li>
+                        <p>2</p>
+                        <img src="./img/quiz02.svg" alt="クイズのイラスト">
+                        <span>外に逃げて助けをよぶ</span>
+                    </li>
+                </ul>
+
+                <div class="quizinfo-txt">
+                    <p><em>A.</em>外に逃げて助けをよぶ</p>
+                    <div class="ansr-info">
+                        <span>まずは、外に逃げることがたいせつです。</span>
+                        <span>安全な場所へいどうしたら、</span>
+                        <span>近くの人や大人に知らせてください。</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="l-quizinfo" id="lrquizinfo">
+                <ul>
+                    <li>
+                        <p>2</p>
+                        <img src="./img/quiz05.svg" alt="クイズのイラスト">
+                        <span>自分から先に避難する</span>
+                    </li>
+                </ul>
+
+                <div class="quizinfo-txt">
+                    <p><em>A.</em>自分から先に避難する</p>
+                    <div class="ansr-info">
+                        <span>自分のいのちは一つしかありません。</span>
+                        <span>いちばん大切なものです。</span>
+                        <span>ムリをせず、先に避難しましょう。</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="l-quizinfo" id="ldquizinfo">
+                <ul>
+                    <li>
+                        <p>2</p>
+                        <img src="./img/quiz08.svg" alt="クイズのイラスト">
+                        <span>ちかくの大人に知らせる</span>
+                    </li>
+                </ul>
+
+                <div class="quizinfo-txt">
+                    <p><em>A.</em>ちかくの大人に知らせる</p>
+                    <div class="ansr-info">
+                        <span>ひとりで行動せず、</span>
+                        <span>ちかくにいる大人のひとに</span>
+                        <span>すぐ知らせることが大切です。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ボタン押した後の黒い透明なアレ -->
+        <div id="overlay"></div>
+
+
+
+        <section id="main-visual">
+            <div class="inner">
+                <div class="m-logo">
+                    <a href="#"><img src="./img/m-logo.svg" alt="MCC 味の感謝を伝える_。"></a>
+                </div>
+
+                <div class="m-h1pic">
+                    <h1>
+                        もしもの時も、<br>
+                        <span class="m-mar">ちゃんとごはん。</span>
+                    </h1>
+
+                    <div class="m-pic-wrap">
+                        <img class="m-pic" src="./img/m_curry.png" alt="カレーの画像">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="profile">
+            <div class="inner">
+                <div class="p-pic">
+                    <img src="./img/m_rice.png" alt="らいすのイラスト">
+                </div>
+
+                <div class="p-txt">
+                    <p>らいす</p>
+                    <span>しろ色のぬいぐるみ</span>
+                    <span>うまれたばかりで知らないことがいっぱい</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <nav id="main-menu">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <a href="#situation">
+                            <span class="m-icon" id="micon01"></span>
+                            <span class="m-txt">いま災害が起きたら</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            <span class="m-icon" id="micon02"></span>
+                            <span class="m-txt">協創シリーズとは</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#lineup">
+                            <span class="m-icon" id="micon03"></span>
+                            <span class="m-txt">協創シリーズ一覧</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#history">
+                            <span class="m-icon" id="micon04"></span>
+                            <span class="m-txt">防災の取り組み</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#check">
+                            <span class="m-icon" id="micon05"></span>
+                            <span class="m-txt">防災チェック</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#begin">
+                            <span class="m-icon" id="micon06"></span>
+                            <span class="m-txt">今日からできる防災</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <section id="situation">
+            <div class="inner">
+                <h2>
+                    もしも今、災害が起きたら
+                    <small>SITUATION</small>
+                </h2>
+
+
+                <div class="s-click">
+                    <span>画像をクリック</span>
+                </div>
+
+
+                <div class="s-click-cards">
+                    <div class="s-click-card">
+                        <div class="s-card" id="scard01">
+                            <button><img src="./img/s_01.svg" alt="クリックボタン"></button>
+                        </div>
+
+                        <div class="s-card" id="scard02">
+                            <button><img src="./img/s_02.svg" alt="クリックボタン"></button>
+                        </div>
+
+                        <div class="s-card" id="scard03">
+                            <button><img src="./img/s_03.svg" alt="クリックボタン"></button>
+                        </div>
+                    </div>
+
+                    <div class="s-click-card">
+                        <div class="s-card" id="scard04">
+                            <button><img src="./img/s_04.svg" alt="クリックボタン"></button>
+                        </div>
+
+                        <div class="s-card" id="scard05">
+                            <button><img src="./img/s_05.svg" alt="クリックボタン"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="situation-catch">
+            <div class="inner">
+                <span>逃げること、身を守ること。</span>
+                <span>それと同じくらい、</span>
+                <p>「食べること」も大切です。</p>
+            </div>
+        </section>
+
+
+
+        <section id="about">
+            <div class="inner">
+                <h2>
+                    協創シリーズとは
+                    <small>ABOUT</small>
+                </h2>
+
+                <ul>
+                    <li><img src="./img/a01.png" alt="消防隊カレーの画像"></li>
+                    <li><img src="./img/a02.png" alt="救助隊員のカレーの画像"></li>
+                    <li><img src="./img/a03.png" alt="潜水士カレーの画像"></li>
+                </ul>
+            </div>
+
+            <div class="about-catch">
+                <div class="inner">
+                    <span>協創シリーズは、災害時にも「きちんと食べられる」ことを大切にした</span>
+                    <span>現場で働く人たちの声をもとに、調合（ブレンド）ではなく、</span>
+                    <span>調理（クッキング）という考え方で作られています。</span>
+                    <span>非常時でも、日常と変わらないおいしさを届けることを目指しています。</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="lineup">
+
+            <h2>
+                協創シリーズ一覧
+                <small>LINEUP</small>
+            </h2>
+
+
+            <!-- 消防カレー -->
+            <div class="lineup-item" id="lfitem">
+                <div class="l-main" id="lfmain">
+                    <div class="l-mainpic">
+                        <img src="./img/l_mainmv01.png" alt="カレーの写真">
+                    </div>
+
+                    <h3>
+                        消防隊カレー
+                        <small>神戸の消防隊員が愛する味</small>
+                    </h3>
+                </div>
+
+
+                <div class="l-details" id="lfdetails">
+                    <div class="inner">
+                        <div class="l-pic" id="lfpic">
+                            <img src="./img/l01.svg" alt="カレーの写真">
+                        </div>
+
+                        <div class="l-features" id="lffeatures">
+                            <ul>
+                                <li>
+                                    <p>災害時でも “本当においしい” を大切に</p>
+                                    <span>非常時でも、食べることで元気になれる味を目指しています。</span>
+                                    <span>消防学校の食堂で実際に親しまれてきたカレーをもとにしています。</span>
+                                </li>
+
+                                <li>
+                                    <p>阪神・淡路大震災の経験から生まれたレシピ</p>
+                                    <span>神戸市消防局と、エム・シーシー食品株式会社が協力して開発。</span>
+                                    <span>現場を知る人たちの声を大切にしながら作られました。</span>
+                                </li>
+                            </ul>
+
+                            <div class="l-price" id="lfprice">
+                                <div class="l-amount">
+                                    <p>標準小売価格<span>518</span>円（税込）</p>
+                                    <p>内容量　200g</p>
+                                </div>
+
+                                <a href="https://www.mccfoods.co.jp/domestic/dom-007/id-3038/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span>商品詳細はこちら</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="l-quiz" id="lfquiz">
+                    <div class="inner">
+                        <h4>おうちで火事がおきたときに<br>まず最初にすることは？</h4>
+
+                        <ul>
+                            <li>
+                                <p>1</p>
+                                <img src="./img/quiz01.svg" alt="クイズのイラスト">
+                                <span>ものを取りに戻る</span>
+                            </li>
+
+                            <li>
+                                <p>2</p>
+                                <img src="./img/quiz02.svg" alt="クイズのイラスト">
+                                <span>外に逃げて助けをよぶ</span>
+                            </li>
+
+                            <li>
+                                <p>3</p>
+                                <img src="./img/quiz03.svg" alt="クイズのイラスト">
+                                <span>エレベーターに乗る</span>
+                            </li>
+                        </ul>
+
+                        <div class="qiz_btn">
+                            <button>
+                                <span>クイズの答えはこちら</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- 救助カレー -->
+            <div class="lineup-item" id="lritem">
+                <div class="l-main" id="lrmain">
+                    <div class="l-mainpic">
+                        <img src="./img/l_mainmv02.png" alt="カレーの写真">
+                    </div>
+
+                    <h3>
+                        <small>兵庫県警察災害と闘う</small>
+                        救助隊員のカレー
+                    </h3>
+                </div>
+
+
+                <div class="l-details" id="lrdetails">
+                    <div class="inner">
+                        <div class="l-pic" id="lrpic">
+                            <img src="./img/l02.svg" alt="カレーの写真">
+                        </div>
+
+                        <div class="l-features" id="lrfeatures">
+                            <ul>
+                                <li>
+                                    <p>災害時でも “食べやすさ” を大切に</p>
+                                    <span>温めてもそのままでも、おいしく食べられる味を目指しています。</span>
+                                    <span>じゃがいもとにんじんがごろっと入った、やさしい辛さのカレーです。</span>
+                                </li>
+
+                                <li>
+                                    <p>阪神・淡路大震災の経験から生まれた一皿</p>
+                                    <span>兵庫県警察と、エム・シーシー食品株式会社が協力して開発。</span>
+                                    <span>救助隊員の声をもとに、幅広い年代に食べやすい味に仕上げています。</span>
+                                </li>
+                            </ul>
+
+                            <div class="l-price" id="lrprice">
+                                <div class="l-amount">
+                                    <p>標準小売価格<span>421</span>円（税込）</p>
+                                    <p>内容量　200g</p>
+                                </div>
+
+                                <a href="https://www.mccfoods.co.jp/domestic/dom-007/id-3041/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span>商品詳細はこちら</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="l-quiz" id="lrquiz">
+                    <div class="inner">
+                        <h4>いそいで避難(ひなん)をするときの<br>ただしい行動はどれ？</h4>
+
+                        <ul>
+                            <li>
+                                <p>1</p>
+                                <img src="./img/quiz04.svg" alt="クイズのイラスト">
+                                <span>だれかが逃げるのをまつ</span>
+                            </li>
+
+                            <li>
+                                <p>2</p>
+                                <img src="./img/quiz05.svg" alt="クイズのイラスト">
+                                <span>自分から先に避難する</span>
+                            </li>
+
+                            <li>
+                                <p>3</p>
+                                <img src="./img/quiz06.svg" alt="クイズのイラスト">
+                                <span>荷物をさがしてから動く</span>
+                            </li>
+                        </ul>
+
+                        <div class="qiz_btn">
+                            <button>
+                                <span>クイズの答えはこちら</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- 潜水カレー -->
+            <div class="lineup-item" id="lditem">
+                <div class="l-main" id="ldmain">
+                    <div class="l-mainpic">
+                        <img src="./img/l_mainmv03.png" alt="カレーの写真">
+                    </div>
+
+                    <h3>
+                        <small>海上保安庁第五管区</small>
+                        みなと神戸を守る！潜水士カレー
+                    </h3>
+                </div>
+
+
+                <div class="l-details" id="lddetails">
+                    <div class="inner">
+                        <div class="l-pic" id="ldpic">
+                            <img src="./img/l03.svg" alt="カレーの写真">
+                        </div>
+
+                        <div class="l-features" id="ldfeatures">
+                            <ul>
+                                <li>
+                                    <p>災害時でも “信頼できる味” を大切に</p>
+                                    <span>海上保安官を支える巡視船の食事から生まれたカレーです。</span>
+                                    <span>粒マスタードがアクセントの、食べごたえあるチキンカレーです。</span>
+                                </li>
+
+                                <li>
+                                    <p>海の現場から生まれたコラボレーション</p>
+                                    <span>第五管区海上保安本部と、エム・シーシー食品株式会社が協力して開発。</span>
+                                    <span>神戸港の巡視艇「はるなみ」で親しまれてきた味です。</span>
+                                </li>
+                            </ul>
+
+                            <div class="l-price" id="ldprice">
+                                <div class="l-amount">
+                                    <p>標準小売価格<span>518</span>円（税込）</p>
+                                    <p>内容量　200g</p>
+                                </div>
+
+                                <a href="https://www.mccfoods.co.jp/domestic/dom-007/id-3044/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <span>商品詳細はこちら</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="l-quiz" id="ldquiz">
+                    <div class="inner">
+                        <h4>海や川であぶない人を見つけたら<br>どうするのがただしい？</h4>
+
+                        <ul>
+                            <li>
+                                <p>1</p>
+                                <img src="./img/quiz07.svg" alt="クイズのイラスト">
+                                <span>自分だけで助けにいく</span>
+                            </li>
+
+                            <li>
+                                <p>2</p>
+                                <img src="./img/quiz08.svg" alt="クイズのイラスト">
+                                <span>ちかくの大人に知らせる</span>
+                            </li>
+
+                            <li>
+                                <p>3</p>
+                                <img src="./img/quiz09.svg" alt="クイズのイラスト">
+                                <span>そのまま見ている</span>
+                            </li>
+                        </ul>
+
+                        <div class="qiz_btn">
+                            <button>
+                                <span>クイズの答えはこちら</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="history">
+
+            <h2>
+                防災の取り組み
+                <small>HISTORY</small>
+            </h2>
+
+
+            <div id="history-catch">
+                <div class="inner">
+                    <div class="h-pic">
+                        <img src="./img/h-pic.png" alt="">
+                    </div>
+
+                    <div class="h-txt">
+                        <span>エム・シーシー食品では、<br>「食」を通して防災を支える取り組みを続けています。</span>
+                        <span>災害時にも、普段と変わらず食べられること。<br>特別な防災食ではなく、日常の食品をそのまま備えに<br>つなげることを大切にしています。</span>
+                        <span>地域への支援や、防災を学ぶ活動を通して、<br>「無理なく続けられる備え」を伝えています。</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="history-card">
+                <div class="h-card" id="hcard01">
+                    <div class="hc-txt">
+                        <p>1995<em>年</em></p>
+                        <span>阪神・淡路大震災<br>にて被災。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard02">
+                    <div class="hc-txt">
+                        <p>1995<em>年</em></p>
+                        <span>甲南工場で、<br>「テイスティハンバーグ」<br>の製造を再開。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard03">
+                    <div class="hc-txt">
+                        <p>1997<em>年</em></p>
+                        <span>甲南工場が<br>「食品衛生優良施設」<br>を受賞。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard04">
+                    <div class="hc-txt">
+                        <p>1999<em>年</em></p>
+                        <span>家庭用レトルト食品が<br>農林水産大臣賞<br>を受賞。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard05">
+                    <div class="hc-txt">
+                        <p>2000<em>年</em></p>
+                        <span>「協創の理念」を掲げた<br>第4次中期経営計画<br>スタート。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard06">
+                    <div class="hc-txt">
+                        <p>2001<em>年</em></p>
+                        <span>家庭用レトルト<br>「神戸カレーシリーズ」<br>を発売。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard07">
+                    <div class="hc-txt">
+                        <p>2006<em>年</em></p>
+                        <span>甲南工場全ラインに<br>X線異物検出機<br>を設置。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard08">
+                    <div class="hc-txt">
+                        <p>2011<em>年</em></p>
+                        <span>東日本大震災時に<br>調理缶詰などの<br>支援物資を供給。</span>
+                    </div>
+                </div>
+
+                <div class="h-card" id="hcard09">
+                    <div class="hc-txt">
+                        <p>2015<em>年</em></p>
+                        <span>「消防隊カレー」<br>を発表。</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="check">
+            <div class="inner">
+                <h2>
+                    防災チェック
+                    <small>CHECK</small>
+                </h2>
+
+                <div class="c-catch">
+                    <p>もしものときの備え、足りていますか？</p>
+                    <span>少しの準備が、大きな安心につながります。</span>
+                    <span>今すぐ完璧でなくても問題ありません。</span>
+                    <span>まずは最低限必要な4つから、見てみましょう。</span>
+                </div>
+
+                <div class="c-pics" id="cpics">
+                    <div class="c-pic" id="cpic">
+                        <img id="rucksack" src="./img/c_rucksack01.png" alt="リュックのイラスト">
+                    </div>
+
+                    <div class="c-items" id="citems">
+                        <div class="c-item" id="citem01">
+                            <div class="item" id="item01">
+                                <p>レトルト食品</p>
+                                <span>温めなくても食べられます。</span>
+                                <span>非常時でも、<em>いつもの味</em>を。</span> <!-- emの部分はあとで赤色に -->
+                            </div>
+
+                            <div class="item" id="item02">
+                                <p>飲料水</p>
+                                <span>水は重いので、少量でOK。</span>
+                                <span>まずは<em>500ml</em>を数本。</span>
+                            </div>
+                        </div>
+
+                        <div class="b-item" id="citem02">
+                            <div class="item" id="item03">
+                                <p>ヘルメット</p>
+                                <span>落下物から<em>頭</em>を守ります。</span>
+                                <span>すぐ被れるようにしておきましょう。</span>
+                            </div>
+
+                            <div class="item" id="item04">
+                                <p>ライト</p>
+                                <span>停電時の必需品。</span>
+                                <span><em>電池</em>の確認も忘れずに。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-btn">
+                    <button id="cbtn">
+                        <span>クリックしてね</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="begin">
+            <div class="inner">
+                <h2>
+                    今日からできる防災
+                    <small>BEGIN</small>
+                </h2>
+            </div>
+
+
+            <div class="b-catch">
+                <span>防災は、遠い未来の話ではありません。<br>毎日の暮らしの中で、少し意識するだけ。<br>特別な知識や、大きな準備がなくても大丈夫です。</span>
+                <span>まずは、今の生活を見直すことから始めてみませんか。<br>今日からできる備えを、ステップで紹介します。</span>
+            </div>
+
+
+            <div class="inner">
+                <div class="begin-card">
+                    <div class="b-card" id="bcard01">
+                        <div class="bc-num">
+                            <p>1</p>
+                            <span>STEP</span>
+                        </div>
+
+                        <div class="bc-txt">
+                            <p>非常食をひとつ決める</p>
+                            <span>まずは「これだけは置く」を決めましょう。</span>
+                            <span>普段の食事に近い味を選べば、</span>
+                            <span>非常時でも安心です。</span>
+                        </div>
+
+                        <div class="bc-pic">
+                            <img src="./img/b01.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="b-card" id="bcard02">
+                        <div class="bc-num">
+                            <p>2</p>
+                            <span>STEP</span>
+                        </div>
+
+                        <div class="bc-txt">
+                            <p>置き場所を決めて、家族と共有</p>
+                            <span>どこにあるか分からなければ、</span>
+                            <span>備えは役に立ちません。</span>
+                            <span>置き場所を決め、家族で共有しましょう。</span>
+                        </div>
+
+                        <div class="bc-pic">
+                            <img src="./img/b02.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="b-card" id="bcard03">
+                        <div class="bc-num">
+                            <p>3</p>
+                            <span>STEP</span>
+                        </div>
+
+                        <div class="bc-txt">
+                            <p>ときどき見直す</p>
+                            <span>食べたら補充、期限が近づいたら入れ替え。</span>
+                            <span>無理なく続けることが、防災を習慣にします。</span>
+                            <span>そして安心は、備えから生まれます。</span>
+                        </div>
+
+                        <div class="bc-pic">
+                            <img src="./img/b03.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="last-catch">
+            <div class="inner">
+                <p id="l-catch-1" class="l-catch">できることから、少しずつ。</p>
+                <p id="l-catch-2" class="l-catch">それも立派な防災です。</p>
+            </div>
+        </section>
+
+
+
+        <nav id="m-menubtn">
+            <button id="cross" class="cross">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="menubtn-wrap">
+                <ul>
+                    <li>
+                        <a href="#situation">
+                            <span class="mb-icon" id="mbicon01"></span>
+                            <span class="mb-txt">いま災害が起きたら</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            <span class="mb-icon" id="mbicon02"></span>
+                            <span class="mb-txt">協創シリーズとは</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#lineup">
+                            <span class="mb-icon" id="mbicon03"></span>
+                            <span class="mb-txt">協創シリーズ一覧</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#history">
+                            <span class="mb-icon" id="mbicon04"></span>
+                            <span class="mb-txt">防災の取り組み</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#check">
+                            <span class="mb-icon" id="mbicon05"></span>
+                            <span class="mb-txt">防災チェック</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#begin">
+                            <span class="mb-icon" id="mbicon06"></span>
+                            <span class="mb-txt">今日からできる防災</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!-- <div id="top-btn">  トップボタン一旦フッターに入れてるのでこっちのは非表示
+            <a href="#main-visual" class="top-btn-inner">
+                <img src="./img/f-arrow.svg" alt="トップボタン">
+            </a>
+        </div> -->
+
+
+
+
+        <footer>
+            <div class="inner">
+                <div class="f-right">
+                    <div class="f-logo">
+                        <a href="#"><img src="./img/f-logo.svg" alt="MCC 味の感謝を伝える_。"></a>
+                    </div>
+
+                    <div class="f-txt">
+                        <div class="f-address">
+                            <p>〒658-0023</p>
+                            <p>神戸市東灘区深江浜町32番</p>
+                        </div>
+                        <span class="copyright">Copyright © MCC FOOD PRODUCTS CO., LTD. All Rights Reserved.</span>
+                    </div>
+                </div>
+
+
+                <div class="f-left">
+                    <div class="f-menu">
+                        <ul id="f-menu-1">
+                            <li>
+                                <a href="#situation">
+                                    <span>いま災害が起きたら</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#history">
+                                    <span>防災の取り組み</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <ul id="f-menu-2">
+                            <li>
+                                <a href="#about">
+                                    <span>協創シリーズとは</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#check">
+                                    <span>防災チェック</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <ul id="f-menu-3">
+                            <li>
+                                <a href="#lineup">
+                                    <span>協創シリーズ一覧</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#begin">
+                                    <span>今日からできる防災</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="f-pic">
+                        <img src="./img/f_pic.png" alt="">
+                    </div>
+                </div>
+
+                <div id="top-btn">
+                    <a href="#main-visual" class="top-btn-inner">
+                        <img src="./img/f-arrow.svg" alt="トップボタン">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
