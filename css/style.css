@@ -60,26 +60,6 @@ h2 small {
 
 
 
-/* 共通 - スクロールバー */
-::-webkit-scrollbar {
-    width: 18px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #f6f4ee;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #4BB2C8;
-    border-radius: 10px;
-    border: 4px solid #f6f4ee;
-    cursor: pointer;
-}
-
-
-
-
-
 /* メインビジュアル */
 #main-visual {
     background: url(../img/m_back01.svg) right bottom / cover;
