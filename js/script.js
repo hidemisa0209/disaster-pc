@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   ScrollReveal().reveal(
-    '#main-visual .m-pic-wrap',
+    '#main-visual',
     {
       duration: 800,
       opacity: 0,
