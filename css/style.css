@@ -17,6 +17,7 @@ body{
   width: 100%;
   min-width: 1280px;
   margin: 0 auto;
+  overflow: hidden;
   background-image: url(../img/bg.png);
 }
 
