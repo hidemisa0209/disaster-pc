@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   ScrollReveal().reveal(
-    '#main-visual',
+    '#main-visual, .f-pic',
     {
       duration: 800,
       opacity: 0,
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   ScrollReveal().reveal(
-    '.b-catch span, .b-card, .l-catch, .f-logo, .f-address, .copyright, .f-menu li, .f-pic, #top-btn',
+    '.b-catch span, .b-card, .l-catch, .f-logo, .f-address, .copyright, .f-menu li, #top-btn',
     {
       duration: 800,
       opacity: 0,
