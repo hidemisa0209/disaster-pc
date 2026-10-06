@@ -16,6 +16,7 @@ body{
 .wrapper {
   width: 100%;
   min-width: 1280px;
+  max-width: 1480px;
   margin: 0 auto;
   overflow: hidden;
   background-image: url(../img/bg.png);
